@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "Jedidiah Amaraegbu's submission for Tested Recruiters PSD to SPA challenge",
   "scripts": {
-    "nextjs-app": "pnpm --filter nextjs-app run dev -- -p 3000"
+    "nextjs-app:dev": "pnpm nx dev nextjs-app",
+    "nextjs-app": "pnpm nx start nextjs-app"
   },
   "keywords": [
     "psd",
@@ -17,5 +18,8 @@
     "responsive"
   ],
   "author": "Jedidiah Amaraegbu",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "nx": "^16.9.1"
+  }
 }
