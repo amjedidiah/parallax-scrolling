@@ -1,0 +1,19 @@
+{
+  "name": "tested_recruiters",
+  "version": "1.0.0",
+  "description": "Submission for the Tested Recruiters PSD to HTML conversion challenge",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "psd",
+    "html",
+    "css",
+    "javascript",
+    "jquery",
+    "tailwindcss",
+    "responsive"
+  ],
+  "author": "Jedidiah Amaraegbu",
+  "license": "ISC"
+}
