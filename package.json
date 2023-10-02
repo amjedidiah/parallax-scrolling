@@ -1,16 +1,18 @@
 {
   "name": "tested_recruiters",
   "version": "1.0.0",
-  "description": "Submission for the Tested Recruiters PSD to HTML conversion challenge",
+  "description": "Jedidiah Amaraegbu's submission for Tested Recruiters PSD to SPA challenge",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "nextjs-app": "pnpm --filter nextjs-app run dev -- -p 3000"
   },
   "keywords": [
     "psd",
+    "spa",
     "html",
     "css",
     "javascript",
     "jquery",
+    "nextjs",
     "tailwindcss",
     "responsive"
   ],
