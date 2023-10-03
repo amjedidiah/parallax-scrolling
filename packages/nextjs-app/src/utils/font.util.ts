@@ -13,7 +13,7 @@ export const bebas = localFont({
 
 export const lato = Lato({
   subsets: ["latin"],
-  weight: ["400", "900"],
+  weight: ["400", "700", "900"],
   variable: "--font-lato",
   fallback: ["sans-serif"],
 });

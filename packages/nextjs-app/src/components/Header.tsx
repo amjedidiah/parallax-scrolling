@@ -10,11 +10,11 @@ const navItems = ["01. HISTORY", "02. TEAM"];
 
 export default function Header({ isTransparent }: Props) {
   return (
-    <header className={`${isTransparent ? "" : "bg-white"}`}>
+    <header className={`${isTransparent ? "" : "bg-white"} fixed w-full z-10`}>
       <nav className="container py-4 flex items-center">
         <Link href="/" className="flex items-center ms-4">
           <Image
-            src="/logo.png"
+            src="/images/logo.png"
             alt="logo"
             width={43}
             height={43}
@@ -37,7 +37,7 @@ export default function Header({ isTransparent }: Props) {
             lato.variable
           } font-lato inline-flex flex-1 justify-end text-xs ${
             isTransparent ? "text-white" : " text-blue-100"
-          } italic leading-[1.667] gap-8`}
+          } italic leading-[1.667] gap-8 font-bold`}
         >
           {navItems.map((item) => (
             <li
