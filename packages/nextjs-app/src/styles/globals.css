@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    body {
+        @apply font-lato;
+    }
+}
+
+@layer components {
+    .container {
+        @apply max-w-[992px] mx-auto px-8;
+    }
+}
