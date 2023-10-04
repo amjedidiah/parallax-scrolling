@@ -1,9 +1,12 @@
 import useTransparentHeader from "@/hooks/use-transparent-header";
 import { bebas, lato } from "@/utils/font.util";
 import Image from "next/image";
-import Link from "next/link";
+import { Link } from "react-scroll";
 
-const navItems = ["01. HISTORY", "02. TEAM"];
+const navItems = [
+  { to: "history", title: "01. HISTORY" },
+  { to: "team", title: "02. TEAM" },
+];
 
 export default function Header() {
   const isTransparent = useTransparentHeader();
@@ -11,7 +14,7 @@ export default function Header() {
   return (
     <header className={`${isTransparent ? "" : "bg-white"} fixed w-full z-10`}>
       <nav className="container py-4 flex items-center">
-        <Link href="/" className="flex items-center ms-4">
+        <Link to="top" smooth className="flex items-center ms-4 cursor-pointer">
           <Image
             src="/images/logo.webp"
             alt="logo"
@@ -39,14 +42,17 @@ export default function Header() {
             isTransparent ? "text-white" : " text-blue-100"
           } italic leading-[1.667] gap-8 font-bold`}
         >
-          {navItems.map((item) => (
-            <li
-              key={item}
-              className={`active:font-black active:border-b hover:font-black hover:border-b-2 border-b ${
-                isTransparent ? "border-b-white" : "border-b-blue-100"
-              } cursor-pointer px-1`}
-            >
-              {item}
+          {navItems.map(({ title, to }) => (
+            <li key={to}>
+              <Link
+                to={to}
+                smooth
+                className={`active:font-black active:border-b hover:font-black hover:border-b-2 border-b ${
+                  isTransparent ? "border-b-white" : "border-b-blue-100"
+                } cursor-pointer p-1`}
+              >
+                {title}
+              </Link>
             </li>
           ))}
         </ul>

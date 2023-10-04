@@ -12,12 +12,14 @@
     "next": "latest",
     "react": "latest",
     "react-dom": "latest",
+    "react-scroll": "^1.8.9",
     "swiper": "^10.3.1"
   },
   "devDependencies": {
     "@types/node": "latest",
     "@types/react": "latest",
     "@types/react-dom": "latest",
+    "@types/react-scroll": "^1.8.8",
     "autoprefixer": "latest",
     "eslint": "latest",
     "eslint-config-next": "latest",

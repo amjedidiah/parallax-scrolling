@@ -5,13 +5,13 @@ export default function useTransparentHeader() {
 
   useEffect(() => {
     const handleScroll = () => {
-      const peakContainer = document.getElementById("peakContainer");
-      if (!peakContainer) return;
+      const history = document.getElementById("history");
+      if (!history) return;
 
-      const peakContainerPosition = peakContainer.getBoundingClientRect().top;
+      const peakContainerPosition = history.getBoundingClientRect().top;
 
-      // If peakContainer is at the top of the screen, make header not transparent
-      setIsHeaderTransparent(peakContainerPosition > 75);
+      // If history is at the top of the screen, make header not transparent
+      setIsHeaderTransparent(peakContainerPosition > 10);
     };
 
     window.addEventListener("scroll", handleScroll);

@@ -27,18 +27,14 @@ const slides = [slide1, slide2, slide1, slide2];
 
 export default function History() {
   return (
-    <ParallaxSection className="bg-peak">
-      <div
-        className="flex flex-col justify-between min-h-screen pt-[135px] z-10 bg-blue-300 [&_*]:text-white [&_span:after]:bg-white sm:bg-transparent sm:[&_h2_span:nth-of-type(1)]:text-blue-200 sm:[&_h2_span:nth-of-type(2)]:text-blue-100 sm:[&_span:after]:bg-blue-200 sm:[&_p]:text-black"
-        id="peakContainer"
-      >
-        <div className="container mb-10">
-          <SectionHeader
-            number="01"
-            title="History"
-            description={`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in ante viverra, rutrum erat rutrum, consectetur mi. Proin at maximus est. Nullam purus ex, iaculis sed erat sed, blandit tincidunt quam. Cras scelerisque id quam sed dignissim Pellentesque urna nunc, gravida quis hendrerit ac, tristique ut quam. Vivamus suscipit dignissim tortor nec congue. `}
-          />
-        </div>
+    <ParallaxSection className="bg-peak" id="history">
+      <div className="flex flex-col justify-between min-h-screen pt-[135px] bg-blue-300 [&_*]:text-white [&_span:after]:bg-white sm:bg-transparent sm:[&_h2_span:nth-of-type(1)]:text-blue-200 sm:[&_h2_span:nth-of-type(2)]:text-blue-100 sm:[&_span:after]:bg-blue-200 sm:[&_p]:text-black">
+        <SectionHeader
+          className="mb-10"
+          number="01"
+          title="History"
+          description={`Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in ante viverra, rutrum erat rutrum, consectetur mi. Proin at maximus est. Nullam purus ex, iaculis sed erat sed, blandit tincidunt quam. Cras scelerisque id quam sed dignissim Pellentesque urna nunc, gravida quis hendrerit ac, tristique ut quam. Vivamus suscipit dignissim tortor nec congue. `}
+        />
 
         <div className="bg-blue-300">
           <div className="container [&_.swiper-pagination-bullet]:w-[6px] [&_.swiper-pagination-bullet]:h-[6px] [&_.swiper-pagination-bullet]:bg-white [&_.swiper]:overflow-y-visible [&_.swiper-pagination]:-mb-7">
