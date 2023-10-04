@@ -1,24 +1,24 @@
+import useTransparentHeader from "@/hooks/use-transparent-header";
 import { bebas, lato } from "@/utils/font.util";
 import Image from "next/image";
 import Link from "next/link";
 
-type Props = {
-  isTransparent?: boolean;
-};
-
 const navItems = ["01. HISTORY", "02. TEAM"];
 
-export default function Header({ isTransparent }: Props) {
+export default function Header() {
+  const isTransparent = useTransparentHeader();
+
   return (
     <header className={`${isTransparent ? "" : "bg-white"} fixed w-full z-10`}>
       <nav className="container py-4 flex items-center">
         <Link href="/" className="flex items-center ms-4">
           <Image
-            src="/images/logo.png"
+            src="/images/logo.webp"
             alt="logo"
             width={43}
             height={43}
             className="mx-2"
+            quality={100}
           />
           <span
             className={`${
