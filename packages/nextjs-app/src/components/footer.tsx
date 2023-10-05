@@ -4,7 +4,7 @@ import { Link } from "react-scroll";
 
 export default function Footer() {
   return (
-    <header className="bg-blue-100">
+    <footer className="bg-blue-100">
       <nav className="container py-4 flex items-center">
         <Link to="top" smooth className="flex items-center ms-4 cursor-pointer">
           <Image
@@ -29,6 +29,6 @@ export default function Footer() {
           COPYRIGHT 2016. ALL RIGHTS RESERVED.
         </p>
       </nav>
-    </header>
+    </footer>
   );
 }

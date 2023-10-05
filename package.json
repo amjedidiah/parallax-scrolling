@@ -4,7 +4,8 @@
   "description": "Jedidiah Amaraegbu's submission for Tested Recruiters PSD to SPA challenge",
   "scripts": {
     "nextjs-app:dev": "pnpm nx dev nextjs-app",
-    "nextjs-app": "pnpm nx start nextjs-app"
+    "nextjs-app": "pnpm nx start nextjs-app",
+    "htmljs-app": "pnpm parcel packages/html-app/index.html"
   },
   "keywords": [
     "psd",
@@ -20,6 +21,7 @@
   "author": "Jedidiah Amaraegbu",
   "license": "ISC",
   "devDependencies": {
-    "nx": "^16.9.1"
+    "nx": "^16.9.1",
+    "parcel": "^2.9.3"
   }
 }

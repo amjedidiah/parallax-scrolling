@@ -8,10 +8,10 @@ export default function useTransparentHeader() {
       const history = document.getElementById("history");
       if (!history) return;
 
-      const peakContainerPosition = history.getBoundingClientRect().top;
+      const historyPosition = history.getBoundingClientRect().top;
 
       // If history is at the top of the screen, make header not transparent
-      setIsHeaderTransparent(peakContainerPosition > 10);
+      setIsHeaderTransparent(historyPosition > 10);
     };
 
     window.addEventListener("scroll", handleScroll);

@@ -26,8 +26,8 @@ export default function Header() {
           <span
             className={`${
               bebas.variable
-            } font-bebas text-dark-100 text-xl leading-[1.079]  ${
-              isTransparent ? "hidden" : "hidden sm:block"
+            } font-bebas text-dark-100 text-xl leading-[1.079] hidden ${
+              isTransparent ? "" : "sm:block"
             }`}
           >
             LOSANGELES
