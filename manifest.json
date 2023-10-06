@@ -27,12 +27,12 @@
     "shortcuts": [
         {
             "name": "History",
-            "url": "./#history",
+            "url": "#history",
             "description": "The history section"
         },
         {
             "name": "Team",
-            "url": "./#team",
+            "url": "#team",
             "description": "The team section"
         }
     ]
