@@ -1,7 +1,7 @@
 {
     "name": "Parallax Scrolling",
     "short_name": "Parallax",
-    "start_url": "./",
+    "start_url": "./index.html",
     "display": "standalone",
     "description": "Parallax scrolling challenge",
     "lang": "en",
@@ -11,14 +11,14 @@
     "orientation": "any",
     "icons": [
         {
-            "src": "./images/icon-512.png",
+            "src": "./images/512.png",
             "sizes": "512x512",
             "type": "image/png",
             "purpose": "maskable"
         },
         {
-            "src": "./images/icon-192.png",
-            "sizes": "192x192",
+            "src": "./images/196.png",
+            "sizes": "196x196",
             "type": "image/png",
             "purpose": "any"
         }
@@ -27,13 +27,27 @@
     "shortcuts": [
         {
             "name": "History",
-            "url": "#history",
-            "description": "The history section"
+            "url": "./index.html#history",
+            "description": "The history section",
+            "icons": [
+                {
+                    "src": "./images/96.png",
+                    "sizes": "96x96",
+                    "type": "image/png"
+                }
+            ]
         },
         {
             "name": "Team",
-            "url": "#team",
-            "description": "The team section"
+            "url": "./index.html#team",
+            "description": "The team section",
+            "icons": [
+                {
+                    "src": "./images/96.png",
+                    "sizes": "96x96",
+                    "type": "image/png"
+                }
+            ]
         }
     ]
 }
