@@ -1,7 +1,7 @@
 {
     "name": "Parallax Scrolling",
     "short_name": "Parallax",
-    "start_url": "./parallax-scroll",
+    "start_url": "./",
     "display": "standalone",
     "description": "Parallax scrolling challenge",
     "lang": "en",
