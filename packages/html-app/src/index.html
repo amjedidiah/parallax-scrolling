@@ -3,11 +3,17 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tested Recruiters PSD to SPA challenge</title>
+    <title>Parallax Scrolling</title>
     <meta
       name="description"
-      content="Jedidiah Amaraegbu's submission for Tested Recruiters PSD to SPA challenge"
+      content="Parallax scrolling PSD to SPA challenge"
     />
+
+    <!-- Add a manifest -->
+    <link rel="manifest" href="./manifest.json" />
+
+    <!-- Apple touch icon -->
+    <link rel="apple-touch-icon" href="./images/logo.webp" />
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -366,5 +372,10 @@
 
     <!-- Custom JS -->
     <script src="./main.js"></script>
+
+    <!-- Service Worker -->
+    <script>
+      navigator.serviceWorker.register(`./sw.js`);
+    </script>
   </body>
 </html>

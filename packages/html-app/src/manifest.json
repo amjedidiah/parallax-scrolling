@@ -1,0 +1,39 @@
+{
+    "name": "Parallax Scrolling",
+    "short_name": "Parallax",
+    "start_url": ".",
+    "display": "standalone",
+    "description": "Parallax scrolling challenge",
+    "lang": "en",
+    "dir": "auto",
+    "theme_color": "#414f6b",
+    "background_color": "#ffffff",
+    "orientation": "any",
+    "icons": [
+        {
+            "src": "./images/icon-512.png",
+            "sizes": "512x512",
+            "type": "image/png",
+            "purpose": "maskable"
+        },
+        {
+            "src": "./images/icon-192.png",
+            "sizes": "192x192",
+            "type": "image/png",
+            "purpose": "any"
+        }
+    ],
+    "prefer_related_applications": false,
+    "shortcuts": [
+        {
+            "name": "History",
+            "url": "/#history",
+            "description": "The history section"
+        },
+        {
+            "name": "Team",
+            "url": "/#team",
+            "description": "The team section"
+        }
+    ]
+}

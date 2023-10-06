@@ -1,11 +1,14 @@
 {
-  "name": "tested_recruiters",
+  "name": "parallax-scrolling",
   "version": "1.0.0",
-  "description": "Jedidiah Amaraegbu's submission for Tested Recruiters PSD to SPA challenge",
+  "description": "Jedidiah Amaraegbu's submission for Parallax scrolling PSD to SPA challenge",
   "scripts": {
     "next:dev": "pnpm nx dev nextjs-app",
     "next": "pnpm nx start nextjs-app",
-    "html": "pnpm nx start html-app"
+    "html:dev": "pnpm nx dev html-app",
+    "html": "pnpm nx start html-app",
+    "html:submit": "pnpm nx submit html-app",
+    "html:publish": "pnpm nx publish html-app"
   },
   "keywords": [
     "psd",
@@ -21,6 +24,8 @@
   "author": "Jedidiah Amaraegbu",
   "license": "ISC",
   "devDependencies": {
+    "@parcel/packager-raw-url": "2.9.3",
+    "@parcel/transformer-webmanifest": "2.9.3",
     "nx": "^16.9.1"
   }
 }

@@ -8,7 +8,7 @@ const handleHeaderStyling = () => {
   const navList = header.querySelector("ul");
 
   const historyPosition = history.getBoundingClientRect().top;
-  const isTransparent = historyPosition > 10;
+  const isTransparent = historyPosition > 75;
 
   // If history is at the top of the screen, make header not transparent
   if (!isTransparent) {
