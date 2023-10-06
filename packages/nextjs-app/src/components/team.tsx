@@ -20,8 +20,8 @@ export default function Team() {
           description={`Cras scelerisque id quam sed dignissim Pellentesque urna nunc, gravida quis hendrerit ac, tristique ut quam. Vivamus suscipit dignissim tortor nec congue. `}
         />
         <div className={`bg-blue-100 ${oswald.variable} font-oswald`}>
-          <div className="container">
-            <ul className="inline-flex">
+          <div className="md:container">
+            <ul className="inline-flex w-full md:w-fit">
               {Array(2)
                 .fill(0)
                 .map((_, i) => (
@@ -31,6 +31,8 @@ export default function Team() {
                       activeTab === i
                         ? "text-blue-100 bg-slate-100 underline"
                         : "text-slate-100"
+                    } ${
+                      i === 0 ? "w-full md:w-fit" : "hidden md:block"
                     } leading-[1.2] py-3 px-6 cursor-pointer`}
                     onClick={() => setActiveTab(i)}
                   >
@@ -40,7 +42,11 @@ export default function Team() {
             </ul>
           </div>
         </div>
-        <div className="flex-1">
+        <div
+          className={`${
+            activeTab === 0 ? "flex-1" : "overflow-hidden h-0 md:flex-1"
+          } `}
+        >
           <div className="container">
             <div className="px-2 sm:px-8 py-20">
               <div className="bg-white opacity-70 py-5 px-10 max-w-[352px]">
@@ -88,6 +94,56 @@ export default function Team() {
                     </p>
                   </div>
                 )}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className={`md:hidden bg-blue-100 ${oswald.variable} font-oswald`}>
+          <ul className="inline-flex w-full">
+            <li
+              key="tab-2"
+              className={`text-xl w-full ${
+                activeTab === 1
+                  ? "text-blue-100 bg-slate-100 underline"
+                  : "text-slate-100"
+              } leading-[1.2] py-3 px-6 cursor-pointer`}
+              onClick={() => setActiveTab(1)}
+            >
+              MOUNTAIN 2
+            </li>
+          </ul>
+        </div>
+        <div
+          className={`overflow-hidden md:hidden ${
+            activeTab === 1 ? "flex-1" : "h-0"
+          }`}
+        >
+          <div className="container">
+            <div className="px-2 sm:px-8 py-20">
+              <div className="bg-white opacity-70 py-5 px-10 max-w-[352px]">
+                <h4
+                  className={`text-blue-100 ${oswald.variable} font-oswald uppercase text-[2rem] leading-[1.2] mb-2`}
+                >
+                  Schedule
+                </h4>
+                <div className={`${lato.variable} font-lato`}>
+                  <p className="flex justify-between leading-[1.5] gap-x-1 text-black mb-6">
+                    <span>17 Nov 2016</span>
+                    <span>Vestibulum viverra</span>
+                  </p>
+                  <p className="flex justify-between leading-[1.5] gap-x-1 text-black">
+                    <span>13 Dec 2016</span>
+                    <span>Vestibulum viverra</span>
+                  </p>
+                  <p className="flex justify-between leading-[1.5] gap-x-1 text-black mb-6">
+                    <span>28 Dec 2016</span>
+                    <span>Vestibulum viverra</span>
+                  </p>
+                  <p className="flex justify-between leading-[1.5] gap-x-1 text-black">
+                    <span>9 Feb 2017</span>
+                    <span>Vestibulum viverra</span>
+                  </p>
+                </div>
               </div>
             </div>
           </div>

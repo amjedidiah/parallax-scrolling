@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "Jedidiah Amaraegbu's submission for Tested Recruiters PSD to SPA challenge",
   "scripts": {
-    "nextjs-app": "pnpm nx start nextjs-app",
-    "html-app": "pnpm nx start html-app"
+    "next:dev": "pnpm nx dev nextjs-app",
+    "next": "pnpm nx start nextjs-app",
+    "html": "pnpm nx start html-app"
   },
   "keywords": [
     "psd",

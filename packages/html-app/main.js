@@ -116,6 +116,8 @@ class Tab {
     this.tabSection = document.querySelector("#team");
     this.tabLinks = document.querySelectorAll(".tab-link");
     this.tabItems = document.querySelectorAll(".tab-item");
+    this.tabContainer1 = document.querySelector("#tab-container-1");
+    this.tabContainer2 = document.querySelector("#tab-container-2");
 
     this.init();
   }
@@ -136,6 +138,7 @@ class Tab {
     this.updateTabSectionClassNames();
     this.updateTabLinkClassNames();
     this.updateTabItemClassNames();
+    this.updateTabContainerClassNames();
   }
 
   updateTabSectionClassNames() {
@@ -150,7 +153,7 @@ class Tab {
 
   updateTabLinkClassNames() {
     this.tabLinks.forEach((link, index) => {
-      if (index === this.activeTab) {
+      if (index === this.activeTab || (index === 2 && this.activeTab === 1)) {
         link.classList.add("text-blue-100");
         link.classList.add("bg-slate-100");
         link.classList.add("underline");
@@ -172,6 +175,26 @@ class Tab {
         item.classList.add("hidden");
       }
     });
+  }
+
+  updateTabContainerClassNames() {
+    if (this.activeTab === 0) {
+      this.tabContainer1.classList.remove("overflow-hidden");
+      this.tabContainer1.classList.remove("h-0");
+      this.tabContainer1.classList.remove("md:flex-1");
+      this.tabContainer1.classList.add("flex-1");
+
+      this.tabContainer2.classList.add("h-0");
+      this.tabContainer2.classList.remove("flex-1");
+    } else {
+      this.tabContainer1.classList.add("overflow-hidden");
+      this.tabContainer1.classList.add("h-0");
+      this.tabContainer1.classList.add("md:flex-1");
+      this.tabContainer1.classList.remove("flex-1");
+
+      this.tabContainer2.classList.remove("h-0");
+      this.tabContainer2.classList.add("flex-1");
+    }
   }
 }
 

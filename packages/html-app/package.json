@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "build": "pnpm nx run nextjs-app:tailwind-eject && mv ../nextjs-app/build.css build.css",
-    "start": "pnpm parcel index.html"
+    "prebuild": "pnpm nx run nextjs-app:tailwind-eject",
+    "build": "mv ../nextjs-app/build.css tailwind.css",
+    "start": "pnpm parcel ./index.html"
   },
   "keywords": [],
   "author": "",

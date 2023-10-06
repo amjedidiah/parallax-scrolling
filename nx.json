@@ -18,6 +18,9 @@
         "build": {
             "inputs": [
                 "noMarkdown"
+            ],
+            "dependsOn": [
+                "prebuild"
             ]
         },
         "start": {
