@@ -28,11 +28,6 @@
                 "build"
             ]
         },
-        "submit": {
-            "dependsOn": [
-                "build"
-            ]
-        },
         "test": {
             "inputs": [
                 "noMarkdown"
