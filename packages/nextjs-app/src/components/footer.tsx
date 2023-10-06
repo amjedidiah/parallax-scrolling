@@ -16,7 +16,7 @@ export default function Footer() {
             quality={100}
           />
           <span
-            className={`${bebas.variable} font-bebas text-blue-500 text-xl leading-[1.079] hidden sm:block`}
+            className={`${bebas.variable} font-bebas text-blue-400 text-xl leading-[1.079] hidden sm:block`}
           >
             LOSANGELES
             <br />
@@ -24,7 +24,7 @@ export default function Footer() {
           </span>
         </Link>
         <p
-          className={`${lato.variable} font-lato inline-flex flex-1 justify-end text-xs text-blue-500 italic leading-[1.667] font-bold`}
+          className={`${lato.variable} font-lato inline-flex flex-1 justify-end text-xs text-blue-400 italic leading-[1.667] font-bold`}
         >
           COPYRIGHT 2016. ALL RIGHTS RESERVED.
         </p>

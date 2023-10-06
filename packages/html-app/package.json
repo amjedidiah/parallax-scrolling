@@ -1,0 +1,15 @@
+{
+  "name": "html-app",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "pnpm nx run nextjs-app:tailwind-eject && mv ../nextjs-app/build.css build.css",
+    "start": "pnpm parcel index.html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "parcel": "^2.9.3"
+  }
+}

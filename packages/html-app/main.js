@@ -1,3 +1,4 @@
+/* Header Styling */
 const handleHeaderStyling = () => {
   const history = document.getElementById("history");
   const header = document.getElementById("header");
@@ -23,8 +24,8 @@ const handleHeaderStyling = () => {
     navList.classList.remove("text-white");
 
     //   Nav list nav-link border is blue
-    $("#header ul li a").classList.add("border-b-blue-100");
-    $("#header ul li a").classList.remove("border-b-white");
+    $("#header ul li a").addClass("border-b-blue-100");
+    $("#header ul li a").removeClass("border-b-white");
   } else {
     //   Header background is transparent
     // header.classList.add("bg-transparent");
@@ -38,14 +39,12 @@ const handleHeaderStyling = () => {
     navList.classList.remove("text-blue-100");
 
     //   Nav list nav-link border is white
-    $("#header ul li a").classList.add("border-b-white");
-    $("#header ul li a").classList.remove("border-b-blue-100");
+    $("#header ul li a").addClass("border-b-white");
+    $("#header ul li a").removeClass("border-b-blue-100");
   }
 };
 
-window.addEventListener("scroll", handleHeaderStyling);
-handleHeaderStyling();
-
+/* Smooth Scroll */
 $(document).ready(function () {
   // Add smooth scrolling to all links
   $("a").on("click", function (event) {
@@ -72,3 +71,111 @@ $(document).ready(function () {
     } // End if
   });
 });
+
+/* Swiper */
+const swiper = new Swiper(".swiper", {
+  autoplay: {
+    delay: 5000,
+    disableOnInteraction: true,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    type: "bullets",
+    dynamicBullets: true,
+    clickable: true,
+  },
+  scrollbar: {
+    // el: ".swiper-scrollbar",
+    // draggable: true,
+  },
+  spaceBetween: 16,
+  slidesPerView: "auto",
+  breakpoints: {
+    10: {
+      slidesPerView: 1,
+    },
+    768: {
+      slidesPerView: 2,
+    },
+    992: {
+      slidesPerView: 3,
+    },
+    1199: {
+      slidesPerView: 4,
+    },
+  },
+  centeredSlides: true,
+  centeredSlidesBounds: true,
+  centerInsufficientSlides: true,
+});
+
+/* Team Tab */
+class Tab {
+  constructor() {
+    this.activeTab = 0;
+    this.tabSection = document.querySelector("#team");
+    this.tabLinks = document.querySelectorAll(".tab-link");
+    this.tabItems = document.querySelectorAll(".tab-item");
+
+    this.init();
+  }
+
+  init() {
+    this.tabLinks.forEach((link, index) => {
+      link.addEventListener("click", () => this.setActiveTab(index));
+    });
+    this.setActiveTab(this.activeTab);
+  }
+
+  setActiveTab(index) {
+    this.activeTab = index;
+    this.updateTabClassNames();
+  }
+
+  updateTabClassNames() {
+    this.updateTabSectionClassNames();
+    this.updateTabLinkClassNames();
+    this.updateTabItemClassNames();
+  }
+
+  updateTabSectionClassNames() {
+    if (this.activeTab === 0) {
+      this.tabSection.classList.add("bg-tab-1");
+      this.tabSection.classList.remove("bg-tab-2");
+    } else {
+      this.tabSection.classList.add("bg-tab-2");
+      this.tabSection.classList.remove("bg-tab-1");
+    }
+  }
+
+  updateTabLinkClassNames() {
+    this.tabLinks.forEach((link, index) => {
+      if (index === this.activeTab) {
+        link.classList.add("text-blue-100");
+        link.classList.add("bg-slate-100");
+        link.classList.add("underline");
+        link.classList.remove("text-slate-100");
+      } else {
+        link.classList.add("text-slate-100");
+        link.classList.remove("text-blue-100");
+        link.classList.remove("bg-slate-100");
+        link.classList.remove("underline");
+      }
+    });
+  }
+
+  updateTabItemClassNames() {
+    this.tabItems.forEach((item, index) => {
+      if (index === this.activeTab) {
+        item.classList.remove("hidden");
+      } else {
+        item.classList.add("hidden");
+      }
+    });
+  }
+}
+
+const teamTab = new Tab();
+
+window.addEventListener("scroll", handleHeaderStyling);
+handleHeaderStyling();

@@ -17,14 +17,24 @@
       rel="stylesheet"
     />
 
+    <!-- Swiper Styles -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+
+    <!-- Tailwind Styles -->
+    <link rel="stylesheet" href="./build.css" />
+
     <!-- Custom Style -->
     <link rel="stylesheet" href="./style.css" />
   </head>
 
   <body>
     <div id="top"></div>
+
     <header id="header" class="fixed w-full z-10">
-      <nav id="navbar">
+      <nav class="container py-4 flex items-center" id="navbar">
         <a href="#top" class="flex items-center ms-4 cursor-pointer">
           <img
             src="./assets/images/logo.webp"
@@ -36,8 +46,7 @@
           <span
             class="font-bebas text-dark-100 text-xl leading-[1.079] hidden"
             id="logo-text"
-            >LOSANGELES <br />
-            MOUNTAINS</span
+            >LOSANGELES<br />MOUNTAINS</span
           >
         </a>
         <ul
@@ -60,18 +69,254 @@
         </ul>
       </nav>
     </header>
-    <main>Hello world</main>
-    <div id="history"></div>
-    <footer></footer>
 
+    <main>
+      <section
+        class="min-h-screen bg-fixed bg-center lg:bg-left-top bg-no-repeat bg-cover bg-hero mobile:bg-hero-main"
+      >
+        <div class="flex mobile:hidden min-h-screen pt-[21vh] justify-center">
+          <h1
+            class="font-bebas text-dark-100 leading-[0.85] text-[2.5rem] relative -left-5"
+          >
+            Losangeles<br /><span class="text-blue-100">mountains</span>
+          </h1>
+        </div>
+      </section>
+
+      <section
+        class="min-h-screen bg-fixed bg-center lg:bg-left-top bg-no-repeat bg-cover bg-peak"
+        id="history"
+      >
+        <div
+          class="flex flex-col justify-between min-h-screen pt-[135px] bg-blue-300 [&_*]:text-white [&_span:after]:bg-white sm:bg-transparent sm:[&_h2_span:nth-of-type(1)]:text-blue-200 sm:[&_h2_span:nth-of-type(2)]:text-blue-100 sm:[&_span:after]:bg-blue-200 sm:[&_p]:text-black"
+        >
+          <header class="mb-10">
+            <div class="container">
+              <h2 class="leading-[1.2] font-oswald font-bold">
+                <span
+                  class="text-[6.5rem] sm:text-[8.5rem] text-blue-200 relative after:absolute after:content-[' '] after:w-4 after:h-4 after:bottom-[1.875rem] sm:after:bottom-10 after:-right-[18px] after:bg-blue-200"
+                  >01</span
+                >
+                <span
+                  class="text-[2rem] text-blue-100 uppercase relative -top-7"
+                  >History</span
+                >
+              </h2>
+              <p
+                class="font-lato text-black leading-[1.5] max-w-[809px] sm:-mt-4 sm:ps-20"
+              >
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin
+                in ante viverra, rutrum erat rutrum, consectetur mi. Proin at
+                maximus est. Nullam purus ex, iaculis sed erat sed, blandit
+                tincidunt quam. Cras scelerisque id quam sed dignissim
+                Pellentesque urna nunc, gravida quis hendrerit ac, tristique ut
+                quam. Vivamus suscipit dignissim tortor nec congue.
+              </p>
+            </div>
+          </header>
+
+          <div class="bg-blue-300">
+            <div
+              class="container [&_.swiper-pagination-bullet]:w-[6px] [&_.swiper-pagination-bullet]:h-[6px] [&_.swiper-pagination-bullet]:bg-white [&_.swiper]:overflow-y-visible [&_.swiper-pagination]:-mb-7"
+            >
+              <div class="p-5 pb-9">
+                <div class="swiper">
+                  <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      <div>
+                        <img
+                          src="./assets/images/slide-1.webp"
+                          alt="slide"
+                          class="mx-auto"
+                        />
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div>
+                        <img
+                          src="./assets/images/slide-2.webp"
+                          alt="slide"
+                          class="mx-auto"
+                        />
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div>
+                        <img
+                          src="./assets/images/slide-1.webp"
+                          alt="slide"
+                          class="mx-auto"
+                        />
+                      </div>
+                    </div>
+                    <div class="swiper-slide">
+                      <div>
+                        <img
+                          src="./assets/images/slide-2.webp"
+                          alt="slide"
+                          class="mx-auto"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-pagination"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="min-h-screen bg-fixed bg-center lg:bg-left-top bg-no-repeat bg-cover"
+        id="team"
+      >
+        <div class="flex flex-col min-h-screen">
+          <header
+            class="bg-white pt-12 pb-1 [&_.container]:flex [&_.container]:flex-wrap [&_.container]:items-center [&_h2]:flex [&_h2]:items-end [&_h2]:sm:ps-10 [&_h2]:sm:pe-4 [&_h2_span:nth-of-type(1)]:after:bottom-4 [&_h2_span:nth-of-type(1)]:sm:after:bottom-5 [&_h2_span:nth-of-type(2)]:mb-3 [&_h2_span:nth-of-type(2)]:sm:mb-4 [&_p]:sm:ps-[108px] [&_p]:lg:p-0 [&_p]:mb-3 [&_p]:lg:mt-3 [&_p]:lg:max-w-[612px]"
+          >
+            <div class="container">
+              <h2 class="leading-[1.2] font-oswald font-bold">
+                <span
+                  class="text-[6.5rem] sm:text-[8.5rem] text-blue-200 relative after:absolute after:content-[' '] after:w-4 after:h-4 after:bottom-[1.875rem] sm:after:bottom-10 after:-right-[18px] after:bg-blue-200"
+                  >02</span
+                >
+                <span
+                  class="text-[2rem] text-blue-100 uppercase relative -top-7"
+                  >Climb</span
+                >
+              </h2>
+              <p
+                class="font-lato text-black leading-[1.5] max-w-[809px] sm:-mt-4 sm:ps-20"
+              >
+                Cras scelerisque id quam sed dignissim Pellentesque urna nunc,
+                gravida quis hendrerit ac, tristique ut quam. Vivamus suscipit
+                dignissim tortor nec congue.
+              </p>
+            </div>
+          </header>
+          <div class="bg-blue-100 font-oswald">
+            <div class="container">
+              <ul class="inline-flex">
+                <li
+                  class="tab-link text-xl leading-[1.2] py-3 px-6 cursor-pointer"
+                >
+                  MOUNTAIN 1
+                </li>
+                <li
+                  class="tab-link text-xl leading-[1.2] py-3 px-6 cursor-pointer"
+                >
+                  MOUNTAIN 2
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="flex-1">
+            <div class="container">
+              <div class="px-2 sm:px-8 py-20">
+                <div class="bg-white opacity-70 py-5 px-10 max-w-[352px]">
+                  <h4
+                    class="text-blue-100 font-oswald uppercase text-[2rem] leading-[1.2] mb-2"
+                  >
+                    Schedule
+                  </h4>
+                  <div class="tab-item font-lato">
+                    <p
+                      class="flex justify-between leading-[1.5] gap-x-1 text-black"
+                    >
+                      <span>25 Nov 2016</span>
+                      <span>Vestibulum viverra</span>
+                    </p>
+                    <p
+                      class="flex justify-between leading-[1.5] gap-x-1 text-black"
+                    >
+                      <span>28 Nov 2016</span>
+                      <span>Vestibulum viverra</span>
+                    </p>
+                    <p
+                      class="flex justify-between leading-[1.5] gap-x-1 text-black my-6"
+                    >
+                      <span>18 Dec 2016</span>
+                      <span>Vestibulum viverra</span>
+                    </p>
+                    <p
+                      class="flex justify-between leading-[1.5] gap-x-1 text-black"
+                    >
+                      <span>7 Jan 2017</span>
+                      <span>Vestibulum viverra</span>
+                    </p>
+                  </div>
+                  <div class="tab-item font-lato">
+                    <p
+                      class="flex justify-between leading-[1.5] gap-x-1 text-black mb-6"
+                    >
+                      <span>17 Nov 2016</span>
+                      <span>Vestibulum viverra</span>
+                    </p>
+                    <p
+                      class="flex justify-between leading-[1.5] gap-x-1 text-black"
+                    >
+                      <span>13 Dec 2016</span>
+                      <span>Vestibulum viverra</span>
+                    </p>
+                    <p
+                      class="flex justify-between leading-[1.5] gap-x-1 text-black mb-6"
+                    >
+                      <span>28 Dec 2016</span>
+                      <span>Vestibulum viverra</span>
+                    </p>
+                    <p
+                      class="flex justify-between leading-[1.5] gap-x-1 text-black"
+                    >
+                      <span>9 Feb 2017</span>
+                      <span>Vestibulum viverra</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <footer class="bg-blue-100">
+            <nav class="container py-4 flex items-center">
+              <a href="#top" class="flex items-center ms-4 cursor-pointer">
+                <img
+                  src="./assets/images/logo-blue.webp"
+                  alt="logo"
+                  width="{43}"
+                  height="{43}"
+                  class="mx-2"
+                />
+                <span
+                  class="font-bebas text-blue-400 text-xl leading-[1.079] hidden sm:block"
+                >
+                  LOSANGELES
+                  <br />
+                  MOUNTAINS
+                </span>
+              </a>
+              <p
+                class="font-lato inline-flex flex-1 justify-end text-xs text-blue-400 italic leading-[1.667] font-bold"
+              >
+                COPYRIGHT 2016. ALL RIGHTS RESERVED.
+              </p>
+            </nav>
+          </footer>
+        </div>
+      </section>
+    </main>
+
+    <!-- jQuery -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
       integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="tailwind-config.js"></script>
-    <script src="main.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="./main.js"></script>
   </body>
 </html>
