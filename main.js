@@ -153,7 +153,8 @@ class Tab {
 
   updateTabLinkClassNames() {
     this.tabLinks.forEach((link, index) => {
-      if (index === this.activeTab || (index === 2 && this.activeTab === 1)) {
+      const isIndex2Active = index === 2 && this.activeTab === 1;
+      if (index === this.activeTab || isIndex2Active) {
         link.classList.add("text-blue-100");
         link.classList.add("bg-slate-100");
         link.classList.add("underline");

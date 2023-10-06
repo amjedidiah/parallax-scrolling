@@ -1,7 +1,7 @@
 {
     "name": "Parallax Scrolling",
     "short_name": "Parallax",
-    "start_url": ".",
+    "start_url": "./",
     "display": "standalone",
     "description": "Parallax scrolling challenge",
     "lang": "en",
@@ -27,12 +27,12 @@
     "shortcuts": [
         {
             "name": "History",
-            "url": "/#history",
+            "url": "./#history",
             "description": "The history section"
         },
         {
             "name": "Team",
-            "url": "/#team",
+            "url": "./#team",
             "description": "The team section"
         }
     ]
